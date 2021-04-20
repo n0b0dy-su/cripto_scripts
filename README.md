@@ -4,7 +4,7 @@ Shell scripts for consult data about cryptocurrencies
 
 ## cripto_query: 
 
-Is a script that use the [Bitso API](https://bitso.com/api_info?shell#ticker) to colsult data from specified book
+It's a script that uses the [Bitso API](https://bitso.com/api_info?shell#ticker) to conlsult data from specified book
 
 ```json
 {
@@ -24,11 +24,11 @@ Is a script that use the [Bitso API](https://bitso.com/api_info?shell#ticker) to
 }
 ```
 
-**Script requeriments:** Please before to use install [jq](https://linuxhint.com/bash_jq_command/)
+**Script requeriments:** Please install [jq](https://linuxhint.com/bash_jq_command/).
 
 **To Use It:** Just execute the script with the book that you want as a parameter 
 
-Exmaple
+Example
 
 ```bash
 ./cripto_query.sh xrp_mxn
