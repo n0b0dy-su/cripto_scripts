@@ -1,4 +1,8 @@
-#!/bin/sh
+#!/bin/bash
+
+CLEAR='F#FFFFFF'
+TITLE='F#B48EAD'
+PRICE='F#EBCB8B'
 
 data=$(curl -s "https://api.bitso.com/v3/ticker/?book=$1")
 parsed=$(echo $data | jq '. | .payload | .book,.change_24,.last' | tr -d '"')
@@ -12,4 +16,6 @@ fi
 change=$(echo $parsed | awk '{print $2}')
 last=$(echo $parsed | awk '{print $3}')
 
-echo "$book -> change: $change · price: \$$last"
+MOVE=$(if (( $(echo "$change > 0" | bc -l) )); then echo "F#A3BE8C"; else echo "F#BF616A"; fi)
+
+echo -e "%{$TITLE}$book%{$CLEAR} ·[ change: %{$MOVE}$change%{$CLEAR} · price: %{$PRICE}\$$last%{$CLEAR}"

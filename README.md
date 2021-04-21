@@ -1,6 +1,6 @@
 # Scripts for crypto stuff
 
-Shell scripts for consult data about cryptocurrencies
+Bash scripts for consult data about cryptocurrencies
 
 ## cripto_query: 
 
@@ -31,7 +31,7 @@ It's a script that uses the [Bitso API](https://bitso.com/api_info?shell#ticker)
 Example
 
 ```bash
-./cripto_query.sh xrp_mxn
+./cripto_query xrp_mxn
 
 # Output
 xrp_mxn -> change: 1.8395 · price: $27.9696
